@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>John Lloyd Escaran Alamo | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:linear-gradient(to right, #4e73df, #1cc88a);
+    min-height:100vh;
+    color:#333;
+}
+
+/* Navigation */
+nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav button{
+    background:none;
+    border:none;
+    margin:0 15px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    color:#4e73df;
+    transition:0.3s;
+}
+
+nav button:hover{
+    color:#1cc88a;
+}
+
+/* Sections */
+.section{
+    display:none;
+    max-width:850px;
+    margin:60px auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    animation:fadeIn 0.4s ease-in-out;
+}
+
+.active{
+    display:block;
+}
+
+.home{
+    text-align:center;
+}
+
+.home h1{
+    font-size:40px;
+    color:#4e73df;
+}
+
+.home h3{
+    margin-top:10px;
+    font-weight:400;
+}
+
+.quote{
+    margin-top:20px;
+    font-style:italic;
+    font-size:20px;
+    color:#1cc88a;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4e73df;
+}
+
+.skill-box{
+    background:#4e73df;
+    color:white;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    text-align:center;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('objective')">Objective</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+</nav>
+
+<!-- HOME (Default Visible) -->
+<div id="home" class="section active home">
+    <h1>John Lloyd Escaran Alamo</h1>
+    <h3>BS Information Technology | 3rd Year</h3>
+    <div class="quote">"A jack of all trades is a master of none, but often times better than a master of one"</div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+    <h2>👤 Personal Information</h2>
+    <p><strong>Name:</strong> John Lloyd Escaran Alamo</p>
+    <p><strong>Course:</strong> Bachelor of Science in Information Technology</p>
+    <p><strong>Year Level:</strong> 3rd Year</p>
+</div>
+
+<!-- OBJECTIVE -->
+<div id="objective" class="section">
+    <h2>🎯 Career Objective</h2>
+    <p>
+        To become a versatile IT professional capable of adapting to multiple
+        technologies while continuously improving my programming and cybersecurity skills.
+    </p>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section">
+    <h2>🛠 Skills</h2>
+    <div class="skill-box">HTML & CSS</div>
+    <div class="skill-box">JavaScript (Basic)</div>
+    <div class="skill-box">C</div>
+    <div class="skill-box">MySQL</div>
+    <div class="skill-box">Networking Basics</div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <h2>📂 Projects</h2>
+    <ul>
+        <li>Bus Reservation System using C</li>
+    </ul>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <h2>📞 Contact Information</h2>
+    <p>Email: johnlloydalamo248@gmail.com</p>
+    <p>Phone: 09850025253</p>
+    <p>GitHub:github.com/Arash1-01</p>
+</div>
+
+<script>
+function showSection(sectionId){
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    document.getElementById(sectionId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
